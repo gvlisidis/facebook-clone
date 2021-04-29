@@ -9,7 +9,7 @@ class UserResource extends JsonResource
     /**
      * Transform the resource into an array.
      *
-     * @param \Illuminate\Http\Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return array
      */
     public function toArray($request)
@@ -23,7 +23,7 @@ class UserResource extends JsonResource
                 ]
             ],
             'links' => [
-                'self' => url('/users/' . $this->id)
+                'self' => url('/users/'.$this->id)
             ]
         ];
     }

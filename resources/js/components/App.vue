@@ -1,17 +1,29 @@
 <template>
-    <div>
-        <p class="bg-gray-400 text-blue-400 text-xl">Into the App component</p>
+    <div class="flex flex-col flex-1 h-screen overflow-y-hidden">
+        <Nav />
 
-        <router-view></router-view>
+        <div class="flex overflow-y-hidden flex-1">
+            <Sidebar />
 
+            <div class="overflow-x-hidden w-2/3">
+                <router-view></router-view>
+            </div>
+        </div>
     </div>
-
 </template>
 
 <script>
-export default {
-name: "App"
-}
+    import Nav from './Nav';
+    import Sidebar from './Sidebar';
+
+    export default {
+        name: "App",
+
+        components: {
+            Nav,
+            Sidebar
+        }
+    }
 </script>
 
 <style scoped>
