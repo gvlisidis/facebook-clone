@@ -1,6 +1,6 @@
 const state = {
     user: null,
-    userStatus: true,
+    authUserStatus: true,
 };
 
 const getters = {
@@ -8,7 +8,7 @@ const getters = {
         return state.user;
     },
     authUserStatus(state) {
-        return state.userStatus;
+        return state.authUserStatus;
     }
 };
 
@@ -32,7 +32,7 @@ const mutations = {
         state.user = user;
     },
     setStatus(state, status) {
-        state.userStatus = status;
+        state.authUserStatus = status;
     }
 };
 
